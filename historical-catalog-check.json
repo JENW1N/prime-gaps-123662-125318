@@ -1,0 +1,22 @@
+{
+  "checked_date": "2026-11-16",
+  "historical_snapshot": {
+    "commit": "4a12d01a11bd48daa37a0fedc4e7e0cf564d950e",
+    "date": "2019-11-29",
+    "url": "https://raw.githubusercontent.com/primegap-list-project/primegap-list-project.github.io/4a12d01a11bd48daa37a0fedc4e7e0cf564d950e/_data/allgaps.csv",
+    "sha256": "cb29322a58da6b184ea0b0f420480d65c3158ca2a3627e59300a846f7fd79e74"
+  },
+  "current_url": "https://raw.githubusercontent.com/primegap-list-project/primegap-list-project.github.io/master/_data/allgaps.csv",
+  "current_sha256": "4d8ab690efa4529853fcc07e4515ec6d9c9a2470faab4476f22cabfb8750738c",
+  "gaps": {
+    "123662": {
+      "present_in_2019_snapshot": false,
+      "present_in_current_snapshot": false
+    },
+    "125318": {
+      "present_in_2019_snapshot": false,
+      "present_in_current_snapshot": false
+    }
+  },
+  "historical_claim": "Both gaps are absent from the 2019-11-29 catalog snapshot and from the catalog checked on 2026-11-16. The original dates the individual existence questions were first posed are unestablished."
+}

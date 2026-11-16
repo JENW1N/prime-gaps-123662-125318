@@ -1,0 +1,171 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext,newtxmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{booktabs,fancyvrb}
+\usepackage[hidelinks]{hyperref}
+\raggedbottom
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\title[Two certified prime gaps]{Consecutive primes at distances 123,662 and 125,318}
+\author{Will Howe}
+\email{howew@purdue.edu}
+\author{Grant Huffman}
+\email{huffma97@purdue.edu}
+\author{Jensen Kohlmeyer}
+\email{jenwin@purdue.edu}
+\author{Liam Kruer}
+\email{kruerl@purdue.edu}
+\date{November 16, 2026}
+\subjclass[2020]{Primary 11A41; Secondary 11Y11, 11Y55}
+\keywords{Prime gaps, covering congruences, primality certificates}
+\begin{document}
+\begin{abstract}
+We exhibit consecutive-prime gaps of exactly $123\,662$ and $125\,318$,
+with endpoints of $8\,416$ and $6\,454$ decimal digits, respectively.
+Covering congruences certify most interior integers as composite. For the
+second gap, the remaining integers are certified by proper divisors or
+Fermat witnesses. Elliptic-curve certificates prove all four endpoints prime.
+We give the elementary arguments that turn these finite arithmetic checks
+into a proof. The proof is computer-assisted.
+\end{abstract}
+\maketitle
+
+\section{The two gaps}
+For $h\in\{123\,662,125\,318\}$, let $p_h$ be the integer displayed in
+Appendix~A or~B, respectively.
+\begin{theorem}\label{thm:gaps}
+For each of these two values of $h$, the integers $p_h$ and $p_h+h$ are
+consecutive primes. Both endpoints have $8\,416$ digits when $h=123\,662$
+and $6\,454$ digits when $h=125\,318$.
+\end{theorem}
+The full covering tables, additional compositeness witnesses, and four
+primality chains form the supplementary arithmetic appendix. Their mathematical
+format and the required checks are described below.
+
+For each gap, the covering table consists of pairs $(q,b_q)$ with distinct
+prime moduli $q$ and $b_q\not\equiv0,-h\pmod q$. Define
+\[
+ W_h=\prod q,\qquad 0\le a_h<W_h,\qquad a_h\equiv b_q\pmod q.
+\]
+The Chinese remainder theorem determines $a_h$ uniquely, and the displayed
+starting integers satisfy $p_h=a_h+m_hW_h$, with the following parameters.
+\begin{center}
+\begin{tabular}{r r r r r}
+\toprule
+$h$ & $m_h$ & Number of moduli & Largest modulus & Digits of $W_h$\\
+\midrule
+$123\,662$ & $1\,523\,845$ & $2\,216$ & $32\,587$ & $8\,410$\\
+$125\,318$ & $5\,046\,505$ & $1\,754$ & $14\,983$ & $6\,448$\\
+\bottomrule
+\end{tabular}
+\end{center}
+These progressions were obtained by optimizing the covering congruences.
+Sieving and endpoint tests then found the displayed multipliers.
+
+\section{Compositeness of the interior}
+If $1\le j<h$ and $j\equiv-b_q\pmod q$, then $q\mid p_h+j$.
+Since $1<q<p_h+j$, this is a proper divisor. The exact covering counts are
+\begin{center}
+\begin{tabular}{r r r r}
+\toprule
+$h$ & Covered by congruences & Additional divisors & Fermat witnesses\\
+\midrule
+$123\,662$ & $123\,661$ & $0$ & $0$\\
+$125\,318$ & $124\,526$ & $175$ & $616$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For the second gap, the remaining $791$ offsets are listed in the arithmetic
+appendix. At $175$ of them, an integer $d$ satisfies $1<d<p_h+j$ and
+$d\mid p_h+j$. At each of the other $616$, direct modular exponentiation gives
+\[
+ 2^{p_h+j-1}\not\equiv1\pmod{p_h+j}.
+\]
+Fermat's little theorem shows that these integers are composite. The three
+columns account for every interior offset, proving the required
+compositeness in both cases.
+
+\section{Primality of the endpoints}
+We use the elliptic-curve criterion underlying ECPP~\cite{atkinmorain}.
+\begin{lemma}\label{lem:ecpp}
+Let $N>3$ be coprime to $6$ and let $E:y^2=x^3+Ax+B$ satisfy
+$\gcd(4A^3+27B^2,N)=1$. Suppose an affine point $R$ satisfies $[r]R=O$,
+where $r$ is prime and $r>(N^{1/4}+1)^2$. If every division in the
+computation has denominator coprime to $N$, then $N$ is prime.
+\end{lemma}
+\begin{proof}
+If $N$ were composite, it would have a prime divisor $\ell\le\sqrt N$.
+Reduction modulo $\ell$ gives a nonsingular elliptic curve and a nonzero
+point of order $r$. Hasse's bound gives
+$r\le\#E(\mathbb F_\ell)\le(\sqrt\ell+1)^2\le(N^{1/4}+1)^2$,
+a contradiction.
+\end{proof}
+
+Each endpoint certificate is a chain of tuples $(N_i,t_i,s_i,A_i,X_i,Y_i)$.
+Set $N_{i+1}=(N_i+1-t_i)/s_i$, $P_i=(X_i,Y_i)$, and
+$B_i\equiv Y_i^2-X_i^3-A_iX_i\pmod{N_i}$. At every step the exact checks are
+\begin{equation}\label{eq:checks}
+\begin{gathered}
+ N_i>3,\quad s_i>0,\quad N_{i+1}\in\mathbb Z,\quad
+ \gcd(N_i,6)=\gcd(4A_i^3+27B_i^2,N_i)=1,\\
+ N_{i+1}>(N_i^{1/4}+1)^2,\qquad
+ R_i=[s_i]P_i\ne O,\qquad [N_{i+1}]R_i=O.
+\end{gathered}
+\end{equation}
+The points $R_i$ are affine, and all divisions in these group operations
+have denominators coprime to $N_i$. The four chains end as follows.
+\begin{center}
+\begin{tabular}{l r r}
+\toprule
+Starting integer & Steps & Terminal prime\\
+\midrule
+$p_{123\,662}$ & $679$ & $7\,440\,766\,535\,021$\\
+$p_{123\,662}+123\,662$ & $671$ & $636\,419\,037\,730\,097$\\
+$p_{125\,318}$ & $538$ & $450\,463\,843\,321$\\
+$p_{125\,318}+125\,318$ & $537$ & $403\,307\,424\,311\,829\,421$\\
+\bottomrule
+\end{tabular}
+\end{center}
+For completeness, the arithmetic appendix gives elementary order
+certificates for the four terminal primes. Each row specifies $N$, a
+complete factorization of $N-1$, and an integer $g$ such that
+\[
+ g^{N-1}\equiv1\pmod N,\qquad
+ \gcd\bigl(g^{(N-1)/q}-1,N\bigr)=1\quad(q\text{ prime},\ q\mid N-1).
+\]
+For every prime divisor $\ell$ of $N$, these checks force $g$ to have order
+$N-1$ modulo $\ell$. Thus $N-1\mid\ell-1$, so $\ell\ge N$ and $N$ is prime.
+The factor primes are certified recursively in increasing order, starting
+with primes below $100$, which are checked by trial division.
+
+\begin{proof}[Proof of Theorem~\ref{thm:gaps}]
+Starting from the terminal primes and applying Lemma~\ref{lem:ecpp}
+backwards along each chain proves all four endpoints prime. Section~2
+proves every integer between the corresponding endpoints composite.
+The displayed decimal expansions and addition of $h$ give the stated
+digit counts.
+\end{proof}
+
+\subsection*{Acknowledgment}
+The authors acknowledge OpenAI Codex for assistance with the construction,
+finite arithmetic verification, and preparation of this paper.
+\begin{thebibliography}{1}
+\bibitem{atkinmorain}
+A.~O.~L. Atkin and F. Morain,
+\emph{Elliptic curves and primality proving},
+Math. Comp. \textbf{61} (1993), no.~203, 29--68.
+\end{thebibliography}
+
+\appendix
+\clearpage
+\section{The starting prime for $h=123\,662$}\label{app:first}
+The following lines concatenate to $p_{123\,662}$. Spaces separate blocks
+of ten digits. The right endpoint is obtained by adding $123\,662$.
+\input{digits-123662.tex}
+\clearpage
+\section{The starting prime for $h=125\,318$}\label{app:second}
+The following lines concatenate to $p_{125\,318}$. Spaces separate blocks
+of ten digits. The right endpoint is obtained by adding $125\,318$.
+\input{digits-125318.tex}
+\end{document}

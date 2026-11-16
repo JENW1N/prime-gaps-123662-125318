@@ -1,0 +1,12 @@
+{
+  "gap": 123662,
+  "discoverer": "JKWHLKGH",
+  "discovery_date": "2026-11-13",
+  "merit": 6.381917169662486,
+  "digits": 8416,
+  "http_status": 200,
+  "response_url": "https://primegaps.cloudygo.com/",
+  "left_sha256": "b3acacbe505500ae76899e82ef63372cf82ad50295bc9d594bc3e9d14bcaf6cd",
+  "status": "blocked by server recent-submission limit; not queued",
+  "server_message": "Wait 13.2 hours to submit a second set of records, or include 25+ records or a 37+ merit gap."
+}

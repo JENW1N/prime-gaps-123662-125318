@@ -1,0 +1,8 @@
+Verified all 123,661 interior offsets
+2,216 distinct prime moduli, largest 32587
+W has 8,410 decimal digits
+SHA-256 of decimal W d9b802430a02004ca1df3026ec48cb271ddc419f4906a23e0ad84290b8bf6d5b
+SHA-256 of decimal a 6800964c7bd5be6b0b97a11f4ee0bcb3d09f84030a3547e55405b2768a11136d
+Proved a 8,416-digit endpoint prime in 679 ECPP steps
+Proved a 8,416-digit endpoint prime in 671 ECPP steps
+Proved consecutive primes at distance 123,662
