@@ -30,7 +30,7 @@ The verifier reconstructs the endpoints from the CRT data, checks the interior w
 
 The paper and complete certificates are public here. The source archive in the release supplies the mathematical appendix in twelve parts for Hexagon's per-file size limit.
 
-Prime Gap Records submissions were attempted on November 16, 2026. Its server deferred them because of its recent-submission limit, following the accepted 122,290 record. [Catalog submission issue #40](https://github.com/primegap-list-project/prime-gap-list/issues/40) includes both records and asks the maintainers to review or import them. The paper was sent to admin@hexagonmath.org with the PDF attached and source links. The online Hexagon deposit remains unregistered because browser control was unavailable.
+Prime Gap Records submissions were attempted on November 16, 2026. Its server deferred them because of its recent-submission limit, following the accepted 122,290 record. [Catalog submission issue #40](https://github.com/primegap-list-project/prime-gap-list/issues/40) includes both records and asks the maintainers to review or import them. Hexagon received the joint paper as **hexagon:2611.00536** on November 16, 2026. Its preview compiled successfully. Processing and moderator approval are pending. [Submission receipt](https://hexagonmath.org/submit/7e4e15b1-a98f-4b2c-a6ed-2c8d54d3f510) requires the submitting account.
 
 Both gap sizes are absent from the catalog snapshot of November 29, 2019 and from the catalog checked on November 16, 2026. Their original problem dates have not been established.
 

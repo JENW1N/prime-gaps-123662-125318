@@ -1,19 +1,22 @@
 {
-  "destination": "admin@hexagonmath.org",
-  "sender": "bottybo21@gmail.com",
-  "date": "2026-11-16",
-  "message_id": "1a1e55ccace1ad4a",
-  "thread_id": "1a1e55ccace1ad4a",
-  "status": "sent to editors; online deposit registration unconfirmed",
-  "attachment": "consecutive-primes-123662-125318-proof.pdf",
-  "attachment_bytes": 20431244,
-  "license": "CC BY 4.0 requested",
-  "human_understanding": "all parts, confirmed by user",
+  "identifier": "hexagon:2611.00536",
+  "status": "submitted; processing and moderation pending",
+  "receipt_url": "https://hexagonmath.org/submit/7e4e15b1-a98f-4b2c-a6ed-2c8d54d3f510",
+  "draft_id": "7e4e15b1-a98f-4b2c-a6ed-2c8d54d3f510",
+  "received_at": "2026-11-16T19:37:00Z",
+  "source_package_sha256": "502e6bf7b0927847cd8762a5cc0acc810479b438407c82f6ff19b92f35648378",
+  "title": "Consecutive primes at distances 123,662 and 125,318",
   "authors": [
     "Will Howe",
     "Grant Huffman",
     "Jensen Kohlmeyer",
     "Liam Kruer"
   ],
-  "ai_credit": "OpenAI Codex"
+  "license": "CC BY 4.0",
+  "human_understanding": "all parts; confirmed by user",
+  "text_origin": "primarily AI-generated",
+  "ai_credit": "OpenAI Codex",
+  "preview_compiled_successfully": true,
+  "source_parts": 12,
+  "submission_format": "one joint paper covering both gaps"
 }
