@@ -1,0 +1,19 @@
+{
+  "destination": "admin@hexagonmath.org",
+  "sender": "bottybo21@gmail.com",
+  "date": "2026-11-16",
+  "message_id": "1a1e55ccace1ad4a",
+  "thread_id": "1a1e55ccace1ad4a",
+  "status": "sent to editors; online deposit registration unconfirmed",
+  "attachment": "consecutive-primes-123662-125318-proof.pdf",
+  "attachment_bytes": 20431244,
+  "license": "CC BY 4.0 requested",
+  "human_understanding": "all parts, confirmed by user",
+  "authors": [
+    "Will Howe",
+    "Grant Huffman",
+    "Jensen Kohlmeyer",
+    "Liam Kruer"
+  ],
+  "ai_credit": "OpenAI Codex"
+}
